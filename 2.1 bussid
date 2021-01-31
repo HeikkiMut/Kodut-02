@@ -1,0 +1,14 @@
+print("Busside tellimine")
+print("-"*40)
+inimeste_arv = int(input("Sisesta inimeste arv: "))
+bussi_kohtade_arv = int(input("Sisesta kohtade arv bussis: "))
+busside_arv = inimeste_arv // bussi_kohtade_arv
+if (inimeste_arv % bussi_kohtade_arv) > 0:
+    print("Busse on vaja: ",busside_arv+1)
+else:
+    print("Busse on vaja: ",busside_arv)
+viimases_bussis_inimesi = inimeste_arv % bussi_kohtade_arv
+if viimases_bussis_inimesi == 0:
+    print("Viimases bussis on inimesi: ",bussi_kohtade_arv)
+else:
+    print("Viimases bussis on inimesi: ",viimases_bussis_inimesi)
