@@ -1,0 +1,10 @@
+from random import randint
+print("Täringud")
+print("-"*40)
+taringud = int(input("Sisesta täringute arv: "))
+silmade_arv = 0
+print("Täringute arv: ",taringud) 
+while taringud > 0:    
+    silmade_arv = randint(1,6) #suvaline täisarv  
+    print(silmade_arv)
+    taringud -= 1
