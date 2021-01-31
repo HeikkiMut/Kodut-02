@@ -1,0 +1,28 @@
+from random import randint
+print("Õunad")
+print("-"*40)
+
+kordi = 0
+poialpoisid = 0
+
+while 1 > kordi or 5 > kordi: # 5 on muutuja/sisesta, kui mitu x
+    ounad = 0
+    ounad_kokku = 0
+    ounad_lumi = 0
+    poialpoisid = int(input("Mitu pöialpoissi tahab õunu? "))
+    
+    if poialpoisid >= 1 and poialpoisid <= 7:
+        while poialpoisid > 0:    
+            ounad = randint(1,2) #suvaline täisarv  
+            print(ounad)
+            ounad_kokku = ounad_kokku + ounad
+            poialpoisid -= 1        
+        ounad_lumi = 14 - ounad_kokku
+        print("Lumivalgekesele jäi: ",ounad_lumi,"õuna.")
+        kordi += 1
+    elif poialpoisid == 0:
+        print("Kõik õunad jäävad Lumivalgekesele.")
+        kordi += 1
+    else: 
+        print("Nii palju pöialpoisse ei ole olemas! Sisesta palun uus arv!")    
+        kordi += 1
