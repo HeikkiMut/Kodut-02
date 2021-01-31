@@ -1,0 +1,9 @@
+print("Murelikud lapsevanemad")
+print("-"*40)
+ringide_arv = int(input("Sisesta joostud ringide arv: "))
+porgandid = 0
+while ringide_arv > 0:
+    if (ringide_arv % 2) == 0: 
+        porgandid = ringide_arv + porgandid
+    ringide_arv -= 1
+print("Saad preemiaks ",porgandid," porgandit!")
